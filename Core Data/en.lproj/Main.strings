@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Label1"; ObjectID = "XfC-BW-h8T"; */
+"XfC-BW-h8T.text" = "Label1";
+
+/* Class = "UITabBarItem"; title = "Music"; ObjectID = "c0P-Qa-Ikg"; */
+"c0P-Qa-Ikg.title" = "Music";
+
+/* Class = "UITabBarItem"; title = "Favs"; ObjectID = "zAU-F1-yc0"; */
+"zAU-F1-yc0.title" = "Favs";
