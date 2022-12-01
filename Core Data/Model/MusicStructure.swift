@@ -28,7 +28,7 @@ struct Results: Decodable {
     let releaseDate: String
     let kind: String
     let artistId: String
-    let artistUrl: String
+    let artistUrl: String?
     let contentAdvisoryRating: String?
     let artworkUrl100: String
     let genres: [Genres]

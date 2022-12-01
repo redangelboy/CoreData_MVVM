@@ -7,10 +7,11 @@
 
 import UIKit
 
-class musicViewController: UIViewController {
+class favsViewController: UIViewController {
     
-    var music: [Results] = []
-    public var favs: [Results] = []
+    var musics: [Results] = []
+    
+//    var favs: [Results] = []
     
     @IBOutlet weak var musicTableView: UITableView!
 
@@ -26,20 +27,23 @@ class musicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.musicTableView.reloadData()
+        
+        print(musics.compactMap{$0.artistName})
         // Do any additional setup after loading the view.
-        self.network.getInfo(with: "https://rss.applemarketingtools.com/api/v2/mx/music/most-played/100/albums.json") { home in
-            guard let home = home
-            else { return }
-
-            
-            self.music.append(contentsOf: home.feed.results)
-            DispatchQueue.main.async {
-
-                self.musicTableView.reloadData()
-               
-            }
-          
-        }
+//        self.network.getInfo(with: "https://rss.applemarketingtools.com/api/v2/mx/music/most-played/100/albums.json") { home in
+//            guard let home = home
+//            else { return }
+//
+//
+//            self.music.append(contentsOf: home.feed.results)
+//            DispatchQueue.main.async {
+//
+//                self.musicTableView.reloadData()
+//                self.music =
+//            }
+//
+//        }
         
     }
     
@@ -50,25 +54,21 @@ class musicViewController: UIViewController {
     }
 }
 
-extension musicViewController: UITableViewDataSource{
+extension favsViewController: UITableViewDataSource{
     
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(music.count)
-        return self.music.count
+        print(musicViewController().favs.count)
+        return self.musics.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.musicTableView.dequeueReusableCell(withIdentifier: "MusicTableCells", for: indexPath) as? MusicTableViewCell else {return UITableViewCell()}
         
-        let mus = self.music[indexPath.row]
+        let mus = self.musics[indexPath.row]
         
-        //        cell.textLabel?.text = "Something"
+//        cell.textLabel?.text = "Something"
         cell.Label1.text = "Artist: \(mus.artistName)"
         cell.Label2.text = "Song: \(mus.name)"
         print("\(mus.name)")
@@ -89,44 +89,33 @@ extension musicViewController: UITableViewDataSource{
     }
 }
 
-extension musicViewController : UITableViewDelegate {
-    
+extension favsViewController : UITableViewDelegate {
+
     func tableView(_ tableView : UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         print("The selected path is \(indexPath.row)")
-        
-        let mus = self.music[indexPath.row]
-        
-        self.favs.append(mus)
-        favsViewController().musics = self.favs
-        favsViewController().musics.append(mus)
-        print(favs.compactMap{$0.artistName})
-        
-        
+
+        let mus = self.musics[indexPath.row]
+
         self.textToBeSend1 = mus.artistName
         self.textToBeSend2 = mus.name
         self.textToBeSend3 = mus.releaseDate
         self.textTobeSend4 = mus.genres[0].name
-        
+
         let img = mus.artworkUrl100
         self.network.fetchImageData(path: (img)) { data in
-            
+
             DispatchQueue.main.async {
                 guard let data = data else {return}
                 self.imageToBeSend1 = data
-                self.performSegue(withIdentifier: "detailSegue", sender: self)
-                
-            }
-            
-        }
+                self.performSegue(withIdentifier: "favsSegue", sender: self)
 
-        
-        
-        
+            }
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let info = segue.destination as! MusicDetailViewController
-        
+
         info.myString1 = textToBeSend1
         info.myString2 = textToBeSend2
         info.myString3 = textToBeSend3
@@ -137,15 +126,7 @@ extension musicViewController : UITableViewDelegate {
         DispatchQueue.main.async {
 
             self.musicTableView.reloadData()
-           
-        }
-        
-        if segue.identifier == "favs" {
-            //Obtenemos la referencia del siguiente view controller
-            let controller2 = segue.destination as! favsViewController
-            //Aqui pasas la variable de información al siguiente view controller
-            controller2.musics = favs
+
         }
     }
-    
 }

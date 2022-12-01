@@ -82,5 +82,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "495C7004-60ED-4BA0-9E75-E962AD6EB764"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Core Data/Controller/MusicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "musicViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "495C7004-60ED-4BA0-9E75-E962AD6EB764 - 6de0a7eb396f375f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Core_Data.musicViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Core_Data.musicViewController"
+                  moduleName = "Core Data"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/Carpeta%20git/CoreData_MVVM/Core%20Data/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "343">
+               </Location>
+               <Location
+                  uuid = "495C7004-60ED-4BA0-9E75-E962AD6EB764 - 2e4ae7da7e2e193"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Core_Data.musicViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Core_Data.musicViewController&gt;"
+                  moduleName = "Core Data"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/Carpeta%20git/CoreData_MVVM/Core%20Data/Controller/MusicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "285">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

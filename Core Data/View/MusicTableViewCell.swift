@@ -18,8 +18,9 @@ class MusicTableViewCell: UITableViewCell {
     
     @IBOutlet weak var Image1: UIImageView!
     
-//    @IBOutlet weak var Label1: UILabel!
-//    @IBOutlet weak var musicImage: UIImageView!
+    
+    @IBOutlet weak var favs: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

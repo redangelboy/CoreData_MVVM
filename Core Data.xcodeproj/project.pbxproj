@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02071D3829387755008C3CD5 /* FavsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02071D3729387755008C3CD5 /* FavsViewController.swift */; };
+		0223949629370D8300DE41CC /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0223949529370D8300DE41CC /* MusicDetailViewController.swift */; };
 		026F45F5292E5556006A11B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F45F4292E5556006A11B8 /* AppDelegate.swift */; };
 		026F45F7292E5556006A11B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F45F6292E5556006A11B8 /* SceneDelegate.swift */; };
 		026F45F9292E5556006A11B8 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F45F8292E5556006A11B8 /* MusicViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02071D3729387755008C3CD5 /* FavsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsViewController.swift; sourceTree = "<group>"; };
+		0223949529370D8300DE41CC /* MusicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewController.swift; sourceTree = "<group>"; };
 		026F45F1292E5556006A11B8 /* Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		026F45F4292E5556006A11B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		026F45F6292E5556006A11B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				026F45F8292E5556006A11B8 /* MusicViewController.swift */,
+				02071D3729387755008C3CD5 /* FavsViewController.swift */,
+				0223949529370D8300DE41CC /* MusicDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 				026F463F2934402E006A11B8 /* MusicStructure.swift in Sources */,
 				026F45FF292E5556006A11B8 /* Core_Data.xcdatamodeld in Sources */,
 				026F45F9292E5556006A11B8 /* MusicViewController.swift in Sources */,
+				02071D3829387755008C3CD5 /* FavsViewController.swift in Sources */,
 				02D39431293482520046D456 /* MusicTableViewCell.swift in Sources */,
+				0223949629370D8300DE41CC /* MusicDetailViewController.swift in Sources */,
 				026F45F5292E5556006A11B8 /* AppDelegate.swift in Sources */,
 				026F45F7292E5556006A11B8 /* SceneDelegate.swift in Sources */,
 			);
